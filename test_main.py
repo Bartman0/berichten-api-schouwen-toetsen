@@ -68,10 +68,11 @@ def volgindicaties_put(bsn):
 
 
 @pytest.mark.deel_4
-def test_deel_4():
+def test_deel_4(pl_lookup):
     """
     Tests person list 4
     """
+    print(pl_lookup)
 
 
 @pytest.mark.deel_7
@@ -89,7 +90,7 @@ def test_deel_9():
 
 
 def main():
-    print("hello from toetsen-schouwen!")
+    print("hello from schouwen-toetsen!")
     print("run tests through pytest")
 
 

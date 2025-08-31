@@ -84,3 +84,4 @@ def pl_lookup(request):
         print("\n--- Parsed Data Table ---")
         print(data_table)
         print("\n-------------------------")
+    return data_table
