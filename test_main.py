@@ -1,18 +1,19 @@
 import pytest
 import requests
 import os
+import logging
 import json
-import pandas as pd
 from dotenv import load_dotenv, find_dotenv
 
+
 load_dotenv(find_dotenv())
+logger = logging.getLogger()
 
-API_HOST = os.environ.get("API_HOST")
+API_BASE_URL = os.environ.get("API_BASE_URL")
 API_TOKEN = os.environ.get("API_TOKEN")
+API_URL = f"{API_BASE_URL}/volgindicaties"  # Assuming a new batch endpoint
 
-# --- Configuration ---
-# productie URL: https://apigw.idm.diginetwerk.net/api/brp/berichten/v1/berichten
-BASE_URL = f"https://{API_HOST}/volgindicaties"  # Assuming a new batch endpoint
+EINDDATUM = "2025-12-31"
 
 # A fixed list of person numbers to be tested against the API.
 PERSON_NUMBERS_DEEL_4 = [
@@ -32,35 +33,35 @@ PERSON_NUMBERS_DEEL_7 = ["005", "150", "501"]
 PERSON_NUMBERS_DEEL_9 = ["501", "503", "509", "V12"]
 
 
-def volgindicaties_put(bsn):
-    # 1. Define the API endpoint and the batch payload for the POST request.
-    api_url = f"{BASE_URL}/{bsn}"
-    payload = {"einddatum": None}
-    print(f"Performing PUT to URL: {api_url} with batch payload: {payload}")
+def volgindicaties_put(bsn, einddatum, status_code_ok):
+    api_url = f"{API_URL}/{bsn}"
+    payload = {"einddatum": einddatum}
+    request_put(api_url, payload, status_code_ok)
 
-    # 2. Make the PUT request to the REST API to initiate the volgindicatie.
+
+def request_put(api_url, payload, status_code_ok):
+    logger.info(f"Performing PUT to URL: {api_url} with payload: {payload}")
+
     try:
-        response = requests.post(api_url, json=payload, timeout=10)
+        headers = {
+            "Authorization": f"Bearer {API_TOKEN}",
+            "Accept": "application/json, application/hal+json",
+            "Content-Type": "application/json",
+        }
+        logger.debug(f"Headers: {headers}")
+        response = requests.put(api_url, json=payload, headers=headers, timeout=10)
     except requests.exceptions.RequestException as e:
         pytest.fail(f"API request failed. Error: {e}")
 
-    # 3. Assertions on the initial PUT response.
-    assert response.status_code == 201, (
-        f"Expected status code 201, " f"but got {response.status_code}"
+    assert response.status_code == status_code_ok, (
+        f"Expected status code {status_code_ok}, " f"but got {response.status_code}"
     )
 
-    # 4. Assertions on the contents of the response.
     try:
         response_json = response.json()
-        # Assuming a response that separates accepted from rejected items
-        begindatum = response_json.get("begindatum", "")
-        einddatum = response_json.get("einddatum", "")
-        burgerservicenummer = response_json.get("burgerservicenummer", "")
+        einddatum = response_json.get("einddatum")
 
-        assert (
-            begindatum and einddatum and burgerservicenummer
-        ), "Initial response must contain 'begindatum', 'einddatum' and 'burgerservicenummer'."
-
+        assert einddatum, "Response must contain 'einddatum'."
     except (json.JSONDecodeError, AssertionError) as e:
         pytest.fail(
             f"Could not parse a valid response from the PUT request. Error: {e}"
@@ -69,24 +70,26 @@ def volgindicaties_put(bsn):
 
 @pytest.mark.deel_4
 def test_deel_4(pl_lookup):
-    """
-    Tests person list 4
-    """
-    print(pl_lookup)
+    for pl_nummer in PERSON_NUMBERS_DEEL_4:
+        logger.debug(f"[{pl_nummer}]")
+        bsn = pl_lookup[pl_nummer]
+        volgindicaties_put(bsn, einddatum=EINDDATUM, status_code_ok=201)
 
 
 @pytest.mark.deel_7
-def test_deel_7():
-    """
-    Tests person list 7
-    """
+def test_deel_7(pl_lookup):
+    for pl_nummer in PERSON_NUMBERS_DEEL_7:
+        logger.debug(f"[{pl_nummer}]")
+        bsn = pl_lookup[pl_nummer]
+        volgindicaties_put(bsn, einddatum=EINDDATUM, status_code_ok=201)
 
 
 @pytest.mark.deel_9
-def test_deel_9():
-    """
-    Tests person list 9
-    """
+def test_deel_9(pl_lookup):
+    for pl_nummer in PERSON_NUMBERS_DEEL_9:
+        logger.debug(f"[{pl_nummer}]")
+        bsn = pl_lookup[pl_nummer]
+        volgindicaties_put(bsn, einddatum=EINDDATUM, status_code_ok=201)
 
 
 def main():
