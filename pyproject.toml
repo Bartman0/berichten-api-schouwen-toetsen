@@ -14,7 +14,7 @@ dependencies = [
 
 [tool.pytest.ini_options]
 addopts = ["--strict-markers"]
-markers = ["deel_4", "deel_7", "deel_9"]
+markers = ["deel_4", "deel_7", "deel_9", "deel_4_verwijder", "deel_7_verwijder", "deel_9_verwijder"]
 
 log_cli = true
 log_cli_level = "INFO"

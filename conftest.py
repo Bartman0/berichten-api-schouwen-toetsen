@@ -13,7 +13,14 @@ def pytest_addoption(parser):
         action="store",
         default=None,
         help="Run as specific part",
-        choices=("deel_4", "deel_7", "deel_9"),
+        choices=(
+            "deel_4",
+            "deel_7",
+            "deel_9",
+            "deel_4_verwijder",
+            "deel_7_verwijder",
+            "deel_9_verwijder",
+        ),
         required=True,
     )
     parser.addoption(
@@ -67,7 +74,12 @@ def parse_excel_from_row(filepath, sheet_name=0, start_row=2):
         # Since rows are 0-indexed in pandas, we need to skip `start_row - 1` rows.
         # For example, to start at row 3, we skip rows 0 and 1 (2 rows).
         rows_to_skip = start_row - 1
-        df = pd.read_excel(filepath, sheet_name=sheet_name, skiprows=rows_to_skip)
+        df = pd.read_excel(
+            filepath,
+            sheet_name=sheet_name,
+            skiprows=rows_to_skip,
+            converters={"PLnummer": str, "BSN": str},
+        )
         logger.debug(
             f"Successfully parsed data from '{filepath}' starting at row {start_row}."
         )
@@ -88,8 +100,6 @@ def pl_lookup(request):
     logger.debug(data_table)
     lookup = {}
     for _, row in data_table.iterrows():
-        logger.debug(f"[{row["PLnummer"]}] - [{row["BSN"]}]")
-        logger.debug(f"[{repr(row["PLnummer"])}] - [{row["BSN"]}]")
-        lookup[str(row["PLnummer"])] = row["BSN"]
-    logger.debug(lookup["501"])
+        # logger.info(f'{row["PLnummer"]} - {row["BSN"]}')
+        lookup[row["PLnummer"]] = row["BSN"]
     return lookup
