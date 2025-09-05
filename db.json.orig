@@ -1,0 +1,964 @@
+{
+  "volgindicaties": [
+    {
+      "id": 1740,
+      "burgerservicenummer": 1740,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 900132784,
+      "burgerservicenummer": 900132784,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 900132772,
+      "burgerservicenummer": 900132772,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 900132760,
+      "burgerservicenummer": 900132760,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 900132759,
+      "burgerservicenummer": 900132759,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 900132747,
+      "burgerservicenummer": 900132747,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 306777927,
+      "burgerservicenummer": 306777927,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 184648361,
+      "burgerservicenummer": 184648361,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 204661602,
+      "burgerservicenummer": 204661602,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 185063056,
+      "burgerservicenummer": 185063056,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 82117998,
+      "burgerservicenummer": 82117998,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999996605,
+      "burgerservicenummer": 999996605,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999996599,
+      "burgerservicenummer": 999996599,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999997257,
+      "burgerservicenummer": 999997257,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999997245,
+      "burgerservicenummer": 999997245,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999997130,
+      "burgerservicenummer": 999997130,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999998985,
+      "burgerservicenummer": 999998985,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999995947,
+      "burgerservicenummer": 999995947,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999997907,
+      "burgerservicenummer": 999997907,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999994001,
+      "burgerservicenummer": 999994001,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999990147,
+      "burgerservicenummer": 999990147,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999998729,
+      "burgerservicenummer": 999998729,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999996721,
+      "burgerservicenummer": 999996721,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999991000,
+      "burgerservicenummer": 999991000,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999995170,
+      "burgerservicenummer": 999995170,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 111112485,
+      "burgerservicenummer": 111112485,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999991802,
+      "burgerservicenummer": 999991802,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 187928733,
+      "burgerservicenummer": 187928733,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999993033,
+      "burgerservicenummer": 999993033,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999996964,
+      "burgerservicenummer": 999996964,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999992326,
+      "burgerservicenummer": 999992326,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999993860,
+      "burgerservicenummer": 999993860,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999996034,
+      "burgerservicenummer": 999996034,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999995959,
+      "burgerservicenummer": 999995959,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999998365,
+      "burgerservicenummer": 999998365,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999999163,
+      "burgerservicenummer": 999999163,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999999163,
+      "burgerservicenummer": 999999163,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999998754,
+      "burgerservicenummer": 999998754,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999998687,
+      "burgerservicenummer": 999998687,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 304637828,
+      "burgerservicenummer": 304637828,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 123459898,
+      "burgerservicenummer": 123459898,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 912345664,
+      "burgerservicenummer": 912345664,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 184519615,
+      "burgerservicenummer": 184519615,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 30445231,
+      "burgerservicenummer": 30445231,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 300531837,
+      "burgerservicenummer": 300531837,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 300679828,
+      "burgerservicenummer": 300679828,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 300675938,
+      "burgerservicenummer": 300675938647827,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 300639818,
+      "burgerservicenummer": 300639818,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 423250851,
+      "burgerservicenummer": 423250851,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 123460025,
+      "burgerservicenummer": 123460025,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 302533928,
+      "burgerservicenummer": 302533928,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999990858,
+      "burgerservicenummer": 999990858,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999990342,
+      "burgerservicenummer": 999990342,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 100000174,
+      "burgerservicenummer": 100000174,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999991255,
+      "burgerservicenummer": 999991255,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999990202,
+      "burgerservicenummer": 999990202,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999994335,
+      "burgerservicenummer": 999994335,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 2690,
+      "burgerservicenummer": 2690,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999990883,
+      "burgerservicenummer": 999990883,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999994037,
+      "burgerservicenummer": 999994037,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999992703,
+      "burgerservicenummer": 999992703,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999990561,
+      "burgerservicenummer": 999990561,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999993240,
+      "burgerservicenummer": 999993240,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 300667838,
+      "burgerservicenummer": 300667838,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 300659817,
+      "burgerservicenummer": 300659817,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 300649927,
+      "burgerservicenummer": 300649927,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 300765927,
+      "burgerservicenummer": 300765927,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 300745928,
+      "burgerservicenummer": 300745928,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 300873827,
+      "burgerservicenummer": 300873827,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 301851827,
+      "burgerservicenummer": 301851827,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 301835937,
+      "burgerservicenummer": 301835937,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 301943928,
+      "burgerservicenummer": 301943928,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 220514811,
+      "burgerservicenummer": 220514811,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 303937828,
+      "burgerservicenummer": 303937828,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999996484,
+      "burgerservicenummer": 999996484,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999996484,
+      "burgerservicenummer": 999996484,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999996472,
+      "burgerservicenummer": 999996472996460,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 999996423,
+      "burgerservicenummer": 999996423,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 462,
+      "burgerservicenummer": 462,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 425,
+      "burgerservicenummer": 425,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 401,
+      "burgerservicenummer": 401,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 103,
+      "burgerservicenummer": 103,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 97,
+      "burgerservicenummer": 97,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 85,
+      "burgerservicenummer": 85,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 73,
+      "burgerservicenummer": 73,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 61,
+      "burgerservicenummer": 61,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 48,
+      "burgerservicenummer": 48,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 36,
+      "burgerservicenummer": 36,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 24,
+      "burgerservicenummer": 24,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 12,
+      "burgerservicenummer": 12,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 4340,
+      "burgerservicenummer": 4340,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 4200,
+      "burgerservicenummer": 4200,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 4170,
+      "burgerservicenummer": 4170,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 4030,
+      "burgerservicenummer": 4030,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 3980,
+      "burgerservicenummer": 3980,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 3840,
+      "burgerservicenummer": 3840,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 3700,
+      "burgerservicenummer": 3700,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 3670,
+      "burgerservicenummer": 3670,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 3530,
+      "burgerservicenummer": 3530,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 3360,
+      "burgerservicenummer": 33600,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 3190,
+      "burgerservicenummer": 3190,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 3050,
+      "burgerservicenummer": 3050,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 2860,
+      "burgerservicenummer": 2860,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 301567827,
+      "burgerservicenummer": 301567827,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 690018897,
+      "burgerservicenummer": 690018897,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 690013711,
+      "burgerservicenummer": 690013711,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 690013449,
+      "burgerservicenummer": 690013449,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 690011246,
+      "burgerservicenummer": 690011246,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 690009422,
+      "burgerservicenummer": 690009422,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 301671837,
+      "burgerservicenummer": 301671837,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 238096075,
+      "burgerservicenummer": 238096075,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 739761316,
+      "burgerservicenummer": 739761316,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 672320393,
+      "burgerservicenummer": 672320393,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 435178489,
+      "burgerservicenummer": 435178489,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 954516187,
+      "burgerservicenummer": 954516187,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 570957588,
+      "burgerservicenummer": 570957588,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 917583218,
+      "burgerservicenummer": 917583218,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 170364045,
+      "burgerservicenummer": 170364045,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 141254142,
+      "burgerservicenummer": 141254142,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 111111134,
+      "burgerservicenummer": 111111134,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 201111111,
+      "burgerservicenummer": 201111111,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 950046619,
+      "burgerservicenummer": 950046619,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 950046577,
+      "burgerservicenummer": 950046577,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 983257589,
+      "burgerservicenummer": 983257589,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 690603113,
+      "burgerservicenummer": 690603113,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 912345603,
+      "burgerservicenummer": 912345603,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 912345640,
+      "burgerservicenummer": 912345640,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 912345639,
+      "burgerservicenummer": 912345639,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 123457348,
+      "burgerservicenummer": 123457348,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 123458766,
+      "burgerservicenummer": 123458766,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 309775838,
+      "burgerservicenummer": 309775838,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 309969918,
+      "burgerservicenummer": 309969918,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 309937838,
+      "burgerservicenummer": 309937838,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 308833818,
+      "burgerservicenummer": 308833818,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 308971917,
+      "burgerservicenummer": 308971917,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 308965917,
+      "burgerservicenummer": 308965917,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 308963817,
+      "burgerservicenummer": 308963817,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 308951918,
+      "burgerservicenummer": 308951918,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 307579918,
+      "burgerservicenummer": 307579918,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 307565828,
+      "burgerservicenummer": 307565828,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 307561938,
+      "burgerservicenummer": 307561938,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 307741928,
+      "burgerservicenummer": 307741928,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 307741837,
+      "burgerservicenummer": 307741837,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 306555918,
+      "burgerservicenummer": 306555918,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 306555827,
+      "burgerservicenummer": 306555827,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 306667927,
+      "burgerservicenummer": 306667927,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 306665918,
+      "burgerservicenummer": 306665918,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 306663818,
+      "burgerservicenummer": 306663818,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 306867837,
+      "burgerservicenummer": 306867837,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 306867837,
+      "burgerservicenummer": 306867837,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 306865828,
+      "burgerservicenummer": 306865828,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 305863927,
+      "burgerservicenummer": 305863927,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 305731828,
+      "burgerservicenummer": 305731828,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 304539818,
+      "burgerservicenummer": 304539818,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 304535837,
+      "burgerservicenummer": 304535837,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 304661818,
+      "burgerservicenummer": 304661818,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 302641828,
+      "burgerservicenummer": 302641828,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 301671928,
+      "burgerservicenummer": 301671928,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 301931938,
+      "burgerservicenummer": 301931938,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    },
+    {
+      "id": 300931827,
+      "burgerservicenummer": 300931827,
+      "begindatum": "2025-09-01",
+      "einddatum": "2025-12-31"
+    }
+  ]
+}
