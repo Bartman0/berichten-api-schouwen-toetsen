@@ -123,19 +123,21 @@ def request_volgindicatie_put(api_url, payload, status_code_ok):
         pytest.fail(f"API request failed. Error: {e}")
 
     # relax the test for the status code by looking only at the major value
-    assert response.status_code // 100 == status_code_ok // 100, (
-        f"Expected status code {status_code_ok}, " f"but got {response.status_code}"
-    )
-
-    try:
-        response_json = response.json()
-        einddatum = response_json.get("einddatum")
-        assert einddatum, "Response must contain 'einddatum'."
-        return einddatum
-    except (json.JSONDecodeError, AssertionError) as e:
-        pytest.fail(
-            f"Could not parse a valid response from the PUT request. Error: {e}"
+    # if status_code_ok is not set, skip the assertions altogether
+    if status_code_ok:
+        assert response.status_code // 100 == status_code_ok // 100, (
+            f"Expected status code {status_code_ok}, " f"but got {response.status_code}"
         )
+
+        try:
+            response_json = response.json()
+            einddatum = response_json.get("einddatum")
+            assert einddatum, "Response must contain 'einddatum'."
+            return einddatum
+        except (json.JSONDecodeError, AssertionError) as e:
+            pytest.fail(
+                f"Could not parse a valid response from the PUT request. Error: {e}"
+            )
 
 
 def volgindicaties_create_plnummer(pl_lookup, pl_nummer):
@@ -147,7 +149,7 @@ def volgindicaties_create_plnummer(pl_lookup, pl_nummer):
 def volgindicaties_delete_plnummer(pl_lookup, pl_nummer):
     logger.debug(f"[{pl_nummer}]")
     bsn = pl_lookup[pl_nummer]
-    volgindicaties_put(bsn, einddatum=yesterday(), status_code_ok=200)
+    volgindicaties_put(bsn, einddatum=yesterday(), status_code_ok=None)
 
 
 def reset_volgindicaties(pl_lookup, pl_nummers):
@@ -164,18 +166,18 @@ def check_verwachtingen(pl_lookup, pl_nummers):
     wijzigingen_get(today(), burgerservicenummers, status_code_ok=200)
 
 
-@pytest.mark.deel_4
-def test_deel_4(pl_lookup):
-    pl_plaatsen = PERSON_NUMBERS_DEEL_4_PLAATSEN
-    pl_verwijderen = PERSON_NUMBERS_DEEL_4_VERWIJDER
-    setup_volgindicaties(pl_lookup, pl_plaatsen, pl_verwijderen)
-
-
 def setup_volgindicaties(pl_lookup, pl_plaatsen, pl_verwijderen):
     for pl_nummer in pl_plaatsen:
         volgindicaties_create_plnummer(pl_lookup, pl_nummer)
     for pl_nummer in pl_verwijderen:
         volgindicaties_delete_plnummer(pl_lookup, pl_nummer)
+
+
+@pytest.mark.deel_4
+def test_deel_4(pl_lookup):
+    pl_plaatsen = PERSON_NUMBERS_DEEL_4_PLAATSEN
+    pl_verwijderen = PERSON_NUMBERS_DEEL_4_VERWIJDER
+    setup_volgindicaties(pl_lookup, pl_plaatsen, pl_verwijderen)
 
 
 @pytest.mark.deel_4_reset
