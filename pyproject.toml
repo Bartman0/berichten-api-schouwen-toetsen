@@ -15,13 +15,18 @@ dependencies = [
 [tool.pytest.ini_options]
 addopts = ["--strict-markers"]
 markers = [
+  "deel_2",
   "deel_4",
   "deel_7",
   "deel_9",
+  "deel_2_reset",
   "deel_4_reset",
   "deel_7_reset",
   "deel_9_reset",
+  "deel_3_verwacht",
   "deel_4_verwacht",
+  "deel_5_verwacht",
+  "deel_6_verwacht",
   "deel_7_verwacht",
   "deel_9_verwacht",
 ]

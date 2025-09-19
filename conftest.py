@@ -1,7 +1,7 @@
 import logging
 import pytest
 import pandas as pd
-
+from numpy import isnan
 
 logger = logging.getLogger()
 
@@ -14,13 +14,18 @@ def pytest_addoption(parser):
         default=None,
         help="Run as specific part",
         choices=(
+            "deel_2",
             "deel_4",
             "deel_7",
             "deel_9",
+            "deel_2_reset",
             "deel_4_reset",
             "deel_7_reset",
             "deel_9_reset",
+            "deel_3_verwacht",
             "deel_4_verwacht",
+            "deel_5_verwacht",
+            "deel_6_verwacht",
             "deel_7_verwacht",
             "deel_9_verwacht",
         ),
@@ -81,7 +86,7 @@ def parse_excel_from_row(filepath, sheet_name=0, start_row=2):
             filepath,
             sheet_name=sheet_name,
             skiprows=rows_to_skip,
-            converters={"PLnummer": str, "BSN": str},
+            converters={"PLnummer": str, "BSN": str, "opmerking": str, "opmerking.1": str, "opmerking.2": str},
         )
         logger.debug(
             f"Successfully parsed data from '{filepath}' starting at row {start_row}."
@@ -103,6 +108,47 @@ def pl_lookup(request):
     logger.debug(data_table)
     lookup = {}
     for _, row in data_table.iterrows():
-        # logger.info(f'{row["PLnummer"]} - {row["BSN"]}')
         lookup[row["PLnummer"]] = row["BSN"]
     return lookup
+
+
+@pytest.fixture
+def bsns_deel_2(request):
+    data_table = parse_excel_from_row(
+        pl_filename(request), pl_sheet_name(request), start_row=2
+    )
+    logger.debug(data_table)
+    bsns = [row["BSN"] for _, row in data_table.iterrows() if not(isnan(row["A-nummer.1"]))]
+    logger.debug(f"deel_2 BSN's [{len(bsns)}]: {bsns}")
+    return bsns
+
+
+@pytest.fixture
+def bsns_deel_3_verwacht(request):
+    data_table = parse_excel_from_row(
+        pl_filename(request), pl_sheet_name(request), start_row=2
+    )
+    logger.debug(data_table)
+    bsns = [row["BSN"] for _, row in data_table.iterrows() if str(row["opmerking.1"]) != "nan"]
+    logger.debug(f"deel_3 BSN's verwacht [{len(bsns)}]: {bsns}")
+    return bsns
+
+@pytest.fixture
+def bsns_deel_5_verwacht(request):
+    data_table = parse_excel_from_row(
+        pl_filename(request), pl_sheet_name(request), start_row=2
+    )
+    logger.debug(data_table)
+    bsns = [row["BSN"] for _, row in data_table.iterrows() if str(row["opmerking.2"]) != "nan"]
+    logger.debug(f"deel_5 BSN's verwacht [{len(bsns)}]: {bsns}")
+    return bsns
+
+@pytest.fixture
+def bsns_deel_6_verwacht(request):
+    data_table = parse_excel_from_row(
+        pl_filename(request), pl_sheet_name(request), start_row=2
+    )
+    logger.debug(data_table)
+    bsns = [row["BSN"] for _, row in data_table.iterrows() if str(row["opmerking.3"]) != "nan"]
+    logger.debug(f"deel_6 BSN's verwacht [{len(bsns)}]: {bsns}")
+    return bsns

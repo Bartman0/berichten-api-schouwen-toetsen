@@ -22,7 +22,11 @@ API_URL_NIEUWE_INGEZETENEN = (
 
 EINDDATUM_TOEKOMST = "2099-12-31"
 
-# A fixed list of person numbers to be tested against the API.
+# =================================================================
+
+# de lijst voor deel 2 wordt dynamisch vastgesteld obv de beschrijving PL-en
+PERSON_NUMBERS_DEEL_2_PLAATSEN = []
+
 PERSON_NUMBERS_DEEL_4_PLAATSEN = ["001", "V02"]
 
 PERSON_NUMBERS_DEEL_4_VERWIJDER = [
@@ -36,7 +40,7 @@ PERSON_NUMBERS_DEEL_4_VERWIJDER = [
     "509",
 ]
 
-PERSON_NUMBERS_DEEL_4_VERWACHT = ["V02"]
+PERSON_NUMBERS_DEEL_4_VERWACHT = []
 
 PERSON_NUMBERS_DEEL_7_PLAATSEN = ["005"]
 
@@ -49,6 +53,8 @@ PERSON_NUMBERS_DEEL_9_PLAATSEN = ["501", "509"]
 PERSON_NUMBERS_DEEL_9_VERWIJDER = ["503"]
 
 PERSON_NUMBERS_DEEL_9_VERWACHT = ["501", "509"]
+
+# =================================================================
 
 
 def volgindicaties_put(bsn, einddatum, status_code_ok):
@@ -166,11 +172,40 @@ def check_verwachtingen(pl_lookup, pl_nummers):
     wijzigingen_get(today(), burgerservicenummers, status_code_ok=200)
 
 
+def check_verwachtingen_bsns(burgerservicenummers):
+    wijzigingen_get(today(), burgerservicenummers, status_code_ok=200)
+
+
 def setup_volgindicaties(pl_lookup, pl_plaatsen, pl_verwijderen):
     for pl_nummer in pl_plaatsen:
         volgindicaties_create_plnummer(pl_lookup, pl_nummer)
     for pl_nummer in pl_verwijderen:
         volgindicaties_delete_plnummer(pl_lookup, pl_nummer)
+
+
+def setup_volgindicaties_bsns(bsns):
+    for bsn in bsns:
+        volgindicaties_put(bsn, einddatum=EINDDATUM_TOEKOMST, status_code_ok=201)
+
+
+def reset_volgindicaties_bsns(bsns):
+    for bsn in bsns:
+        volgindicaties_put(bsn, einddatum=yesterday(), status_code_ok=None)
+
+
+@pytest.mark.deel_2
+def test_deel_2(bsns_deel_2):
+    setup_volgindicaties_bsns(bsns_deel_2)
+
+
+@pytest.mark.deel_2_reset
+def test_deel_2_reset(bsns_deel_2):
+    reset_volgindicaties_bsns(bsns_deel_2)
+
+
+@pytest.mark.deel_3_verwacht
+def test_deel_3_verwacht(bsns_deel_3_verwacht):
+    check_verwachtingen_bsns(bsns_deel_3_verwacht)
 
 
 @pytest.mark.deel_4
@@ -188,6 +223,16 @@ def test_deel_4_reset(pl_lookup):
 @pytest.mark.deel_4_verwacht
 def test_deel_4_verwacht(pl_lookup):
     check_verwachtingen(pl_lookup, PERSON_NUMBERS_DEEL_4_VERWACHT)
+
+
+@pytest.mark.deel_5_verwacht
+def test_deel_5_verwacht(bsns_deel_5_verwacht):
+    check_verwachtingen_bsns(bsns_deel_5_verwacht)
+
+
+@pytest.mark.deel_6_verwacht
+def test_deel_6_verwacht(bsns_deel_6_verwacht):
+    check_verwachtingen_bsns(bsns_deel_6_verwacht)
 
 
 @pytest.mark.deel_7
