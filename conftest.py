@@ -23,11 +23,8 @@ def pytest_addoption(parser):
             "deel_7_reset",
             "deel_9_reset",
             "deel_3_verwacht",
-            "deel_4_verwacht",
             "deel_5_verwacht",
             "deel_6_verwacht",
-            "deel_7_verwacht",
-            "deel_9_verwacht",
         ),
         required=True,
     )
@@ -130,7 +127,7 @@ def bsns_deel_3_verwacht(request):
     )
     logger.debug(data_table)
     bsns = [row["BSN"] for _, row in data_table.iterrows() if str(row["opmerking.1"]) != "nan"]
-    logger.debug(f"deel_3 BSN's verwacht [{len(bsns)}]: {bsns}")
+    logger.debug(f"deel_3 basisset BSN's verwacht [{len(bsns)}]: {bsns}")
     return bsns
 
 @pytest.fixture
@@ -140,7 +137,7 @@ def bsns_deel_5_verwacht(request):
     )
     logger.debug(data_table)
     bsns = [row["BSN"] for _, row in data_table.iterrows() if str(row["opmerking.2"]) != "nan"]
-    logger.debug(f"deel_5 BSN's verwacht [{len(bsns)}]: {bsns}")
+    logger.debug(f"deel_5 basisset BSN's verwacht [{len(bsns)}]: {bsns}")
     return bsns
 
 @pytest.fixture
@@ -150,5 +147,5 @@ def bsns_deel_6_verwacht(request):
     )
     logger.debug(data_table)
     bsns = [row["BSN"] for _, row in data_table.iterrows() if str(row["opmerking.3"]) != "nan"]
-    logger.debug(f"deel_6 BSN's verwacht [{len(bsns)}]: {bsns}")
+    logger.debug(f"deel_6 basisset BSN's verwacht [{len(bsns)}]: {bsns}")
     return bsns

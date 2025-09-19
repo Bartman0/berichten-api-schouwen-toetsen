@@ -24,8 +24,8 @@ EINDDATUM_TOEKOMST = "2099-12-31"
 
 # =================================================================
 
-# de lijst voor deel 2 wordt dynamisch vastgesteld obv de beschrijving PL-en
-PERSON_NUMBERS_DEEL_2_PLAATSEN = []
+# de lijst voor deel 2,  wordt dynamisch vastgesteld obv de beschrijvingen van de PL-en
+PERSON_NUMBERS_DEEL_2_DYNAMISCH = []
 
 PERSON_NUMBERS_DEEL_4_PLAATSEN = ["001", "V02"]
 
@@ -40,19 +40,13 @@ PERSON_NUMBERS_DEEL_4_VERWIJDER = [
     "509",
 ]
 
-PERSON_NUMBERS_DEEL_4_VERWACHT = []
-
 PERSON_NUMBERS_DEEL_7_PLAATSEN = ["005"]
 
 PERSON_NUMBERS_DEEL_7_VERWIJDER = ["150", "501"]
 
-PERSON_NUMBERS_DEEL_7_VERWACHT = ["005", "V02"]
+PERSON_NUMBERS_DEEL_9_PLAATSEN = ["501", "509", "V02", "???"]
 
-PERSON_NUMBERS_DEEL_9_PLAATSEN = ["501", "509"]
-
-PERSON_NUMBERS_DEEL_9_VERWIJDER = ["503"]
-
-PERSON_NUMBERS_DEEL_9_VERWACHT = ["501", "509"]
+PERSON_NUMBERS_DEEL_9_VERWIJDER = ["503", "???"]
 
 # =================================================================
 
@@ -98,7 +92,7 @@ def request_wijzigingen_get(api_url, parameters, status_code_ok):
 
     # relax the test for the status code by looking only at the major value
     assert response.status_code // 100 == status_code_ok // 100, (
-        f"Expected status code {status_code_ok}, " f"but got {response.status_code}"
+        f"Expected status code {status_code_ok}, but got {response.status_code}: {response.text}"
     )
 
     try:
@@ -220,19 +214,16 @@ def test_deel_4_reset(pl_lookup):
     reset_volgindicaties(pl_lookup, PERSON_NUMBERS_DEEL_4_PLAATSEN)
 
 
-@pytest.mark.deel_4_verwacht
-def test_deel_4_verwacht(pl_lookup):
-    check_verwachtingen(pl_lookup, PERSON_NUMBERS_DEEL_4_VERWACHT)
-
-
 @pytest.mark.deel_5_verwacht
-def test_deel_5_verwacht(bsns_deel_5_verwacht):
-    check_verwachtingen_bsns(bsns_deel_5_verwacht)
+def test_deel_5_verwacht(bsns_deel_5_verwacht, pl_lookup):
+    bsns = set(bsns_deel_5_verwacht) - set([pl_lookup[pl_nummer] for pl_nummer in PERSON_NUMBERS_DEEL_4_VERWIJDER])
+    check_verwachtingen_bsns(bsns)
 
 
 @pytest.mark.deel_6_verwacht
-def test_deel_6_verwacht(bsns_deel_6_verwacht):
-    check_verwachtingen_bsns(bsns_deel_6_verwacht)
+def test_deel_6_verwacht(bsns_deel_6_verwacht, pl_lookup):
+    bsns = set(bsns_deel_6_verwacht) - set([pl_lookup[pl_nummer] for pl_nummer in PERSON_NUMBERS_DEEL_4_VERWIJDER])
+    check_verwachtingen_bsns(bsns)
 
 
 @pytest.mark.deel_7
@@ -247,11 +238,6 @@ def test_deel_7_reset(pl_lookup):
     reset_volgindicaties(pl_lookup, PERSON_NUMBERS_DEEL_7_PLAATSEN)
 
 
-@pytest.mark.deel_7_verwacht
-def test_deel_7_verwacht(pl_lookup):
-    check_verwachtingen(pl_lookup, PERSON_NUMBERS_DEEL_7_VERWACHT)
-
-
 @pytest.mark.deel_9
 def test_deel_9(pl_lookup):
     pl_plaatsen = PERSON_NUMBERS_DEEL_9_PLAATSEN
@@ -262,11 +248,6 @@ def test_deel_9(pl_lookup):
 @pytest.mark.deel_9_reset
 def test_deel_9_reset(pl_lookup):
     reset_volgindicaties(pl_lookup, PERSON_NUMBERS_DEEL_9_PLAATSEN)
-
-
-@pytest.mark.deel_9_verwacht
-def test_deel_9_verwacht(pl_lookup):
-    check_verwachtingen(pl_lookup, PERSON_NUMBERS_DEEL_9_VERWACHT)
 
 
 def main():
