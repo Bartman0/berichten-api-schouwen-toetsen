@@ -24,11 +24,8 @@ markers = [
   "deel_7_reset",
   "deel_9_reset",
   "deel_3_verwacht",
-  "deel_4_verwacht",
   "deel_5_verwacht",
   "deel_6_verwacht",
-  "deel_7_verwacht",
-  "deel_9_verwacht",
 ]
 
 log_cli = true
