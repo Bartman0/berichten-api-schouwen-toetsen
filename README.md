@@ -34,7 +34,7 @@ export API_TOKEN=$(curl -sX POST -H "Content-Type: application/x-www-form-urlenc
 
 en voer vervolgens de afzonderlijke stappen uit van de test:
 
-- uv run pytest --part \<deel van de test\> --pl-filename=<workbook met referentie data over PL-en>.xlsx --pl-sheet-name="tabblad met de gegevens"
+- uv run pytest --part \<deel van de test\> --pl-filename=\<workbook met referentie data over PL-en\>.xlsx --pl-sheet-name="tabblad met de gegevens"
 
 voorbeeld:
 
