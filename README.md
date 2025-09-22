@@ -34,7 +34,7 @@ export API_TOKEN=$(curl -sX POST -H "Content-Type: application/x-www-form-urlenc
 
 en voer vervolgens de afzonderlijke stappen uit van de test:
 
-- uv run pytest --part <deel van de test> --pl-filename=<workbook met referentie data over PL-en>.xlsx --pl-sheet-name="tabblad met de gegevens"
+- uv run pytest --part \<deel van de test\> --pl-filename=<workbook met referentie data over PL-en>.xlsx --pl-sheet-name="tabblad met de gegevens"
 
 voorbeeld:
 
@@ -44,6 +44,13 @@ Er zal een vast workbook en tabblad worden gebruikt voor alle testen. Voor een u
 
 De stappen uit de testen zijn:
 
-- deel_4; na het verwerken van de volgindicaties uit deze test, kunnen de resultaten worden gevalideerd door deel_4_resultaten uit te voeren
-- deel_7; na het verwerken van de volgindicaties uit deze test, kunnen de resultaten worden gevalideerd door deel_7_resultaten uit te voeren
-- deel_9; na het verwerken van de volgindicaties uit deze test, kunnen de resultaten worden gevalideerd door deel_9_resultaten uit te voeren
+- deel_2: initiële opzet van de volgindicaties
+- deel_4: aanvullende wijzigingen van de volgindicaties
+- deel_7: aanvullende wijzigingen van de volgindicaties
+- deel_9: aanvullende wijzigingen van de volgindicaties
+- deel_3: na het verwerken van de mutaties vanuit BRP-V, kunnen de resultaten hiermee worden gevalideerd
+- deel_5: na het verwerken van de mutaties vanuit BRP-V, kunnen de resultaten hiermee worden gevalideerd
+- deel_6: na het verwerken van de mutaties vanuit BRP-V, kunnen de resultaten hiermee worden gevalideerd
+- deel_2_reset: zet de situatie ten aanzien van volgindicaties terug zoals voor deel_2
+- deel_4_reset: zet de situatie ten aanzien van volgindicaties terug zoals voor deel_2
+- deel_7_reset: zet de situatie ten aanzien van volgindicaties terug zoals voor deel_2
