@@ -45,12 +45,12 @@ Er zal een vast workbook en tabblad worden gebruikt voor alle testen. Voor een u
 De stappen uit de testen zijn:
 
 - deel_2: initiële opzet van de volgindicaties
-- deel_4: aanvullende wijzigingen van de volgindicaties
-- deel_7: aanvullende wijzigingen van de volgindicaties
-- deel_9: aanvullende wijzigingen van de volgindicaties
+- deel_2_reset: zet de situatie ten aanzien van volgindicaties terug zoals voor deel_2
 - deel_3: na het verwerken van de mutaties vanuit BRP-V, kunnen de resultaten hiermee worden gevalideerd
+- deel_4: aanvullende wijzigingen van de volgindicaties
+- deel_4_reset: zet de situatie ten aanzien van volgindicaties terug zoals voor deel_4
 - deel_5: na het verwerken van de mutaties vanuit BRP-V, kunnen de resultaten hiermee worden gevalideerd
 - deel_6: na het verwerken van de mutaties vanuit BRP-V, kunnen de resultaten hiermee worden gevalideerd
-- deel_2_reset: zet de situatie ten aanzien van volgindicaties terug zoals voor deel_2
-- deel_4_reset: zet de situatie ten aanzien van volgindicaties terug zoals voor deel_2
-- deel_7_reset: zet de situatie ten aanzien van volgindicaties terug zoals voor deel_2
+- deel_7: aanvullende wijzigingen van de volgindicaties
+- deel_7_reset: zet de situatie ten aanzien van volgindicaties terug zoals voor deel_7
+- deel_9: aanvullende wijzigingen van de volgindicaties
