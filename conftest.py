@@ -83,7 +83,13 @@ def parse_excel_from_row(filepath, sheet_name=0, start_row=2):
             filepath,
             sheet_name=sheet_name,
             skiprows=rows_to_skip,
-            converters={"PLnummer": str, "BSN": str, "opmerking": str, "opmerking.1": str, "opmerking.2": str},
+            converters={
+                "PLnummer": str,
+                "BSN": str,
+                "opmerking": str,
+                "opmerking.1": str,
+                "opmerking.2": str,
+            },
         )
         logger.debug(
             f"Successfully parsed data from '{filepath}' starting at row {start_row}."
@@ -115,7 +121,9 @@ def bsns_deel_2(request):
         pl_filename(request), pl_sheet_name(request), start_row=2
     )
     logger.debug(data_table)
-    bsns = [row["BSN"] for _, row in data_table.iterrows() if not(isnan(row["A-nummer.1"]))]
+    bsns = [
+        row["BSN"] for _, row in data_table.iterrows() if not (isnan(row["A-nummer"]))
+    ]
     logger.debug(f"deel_2 BSN's [{len(bsns)}]: {bsns}")
     return bsns
 
@@ -126,9 +134,14 @@ def bsns_deel_3_verwacht(request):
         pl_filename(request), pl_sheet_name(request), start_row=2
     )
     logger.debug(data_table)
-    bsns = [row["BSN"] for _, row in data_table.iterrows() if str(row["opmerking.1"]) != "nan"]
+    bsns = [
+        row["BSN"]
+        for _, row in data_table.iterrows()
+        if str(row["opmerking.1"]) != "nan"
+    ]
     logger.debug(f"deel_3 basisset BSN's verwacht [{len(bsns)}]: {bsns}")
     return bsns
+
 
 @pytest.fixture
 def bsns_deel_5_verwacht(request):
@@ -136,9 +149,14 @@ def bsns_deel_5_verwacht(request):
         pl_filename(request), pl_sheet_name(request), start_row=2
     )
     logger.debug(data_table)
-    bsns = [row["BSN"] for _, row in data_table.iterrows() if str(row["opmerking.2"]) != "nan"]
+    bsns = [
+        row["BSN"]
+        for _, row in data_table.iterrows()
+        if str(row["opmerking.2"]) != "nan"
+    ]
     logger.debug(f"deel_5 basisset BSN's verwacht [{len(bsns)}]: {bsns}")
     return bsns
+
 
 @pytest.fixture
 def bsns_deel_6_verwacht(request):
@@ -146,6 +164,10 @@ def bsns_deel_6_verwacht(request):
         pl_filename(request), pl_sheet_name(request), start_row=2
     )
     logger.debug(data_table)
-    bsns = [row["BSN"] for _, row in data_table.iterrows() if str(row["opmerking.3"]) != "nan"]
+    bsns = [
+        row["BSN"]
+        for _, row in data_table.iterrows()
+        if str(row["opmerking.3"]) != "nan"
+    ]
     logger.debug(f"deel_6 basisset BSN's verwacht [{len(bsns)}]: {bsns}")
     return bsns
