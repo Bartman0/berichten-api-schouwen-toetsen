@@ -87,13 +87,14 @@ def request_wijzigingen_get(api_url, parameters, status_code_ok):
         }
         logger.debug(f"Headers: {headers}")
         response = requests.get(api_url, params=parameters, headers=headers, timeout=10)
+        logger.debug(f"{response.content}")
     except requests.exceptions.RequestException as e:
         pytest.fail(f"API request failed. Error: {e}")
 
     # relax the test for the status code by looking only at the major value
-    assert response.status_code // 100 == status_code_ok // 100, (
-        f"Expected status code {status_code_ok}, but got {response.status_code}: {response.text}"
-    )
+    assert (
+        response.status_code // 100 == status_code_ok // 100
+    ), f"Expected status code {status_code_ok}, but got {response.status_code}: {response.text}"
 
     try:
         response_json = response.json()
@@ -119,6 +120,7 @@ def request_volgindicatie_put(api_url, payload, status_code_ok):
         }
         logger.debug(f"Headers: {headers}")
         response = requests.put(api_url, json=payload, headers=headers, timeout=10)
+        logger.debug(f"{response.content}")
     except requests.exceptions.RequestException as e:
         pytest.fail(f"API request failed. Error: {e}")
 
@@ -216,13 +218,17 @@ def test_deel_4_reset(pl_lookup):
 
 @pytest.mark.deel_5_verwacht
 def test_deel_5_verwacht(bsns_deel_5_verwacht, pl_lookup):
-    bsns = set(bsns_deel_5_verwacht) - set([pl_lookup[pl_nummer] for pl_nummer in PERSON_NUMBERS_DEEL_4_VERWIJDER])
+    bsns = set(bsns_deel_5_verwacht) - set(
+        [pl_lookup[pl_nummer] for pl_nummer in PERSON_NUMBERS_DEEL_4_VERWIJDER]
+    )
     check_verwachtingen_bsns(bsns)
 
 
 @pytest.mark.deel_6_verwacht
 def test_deel_6_verwacht(bsns_deel_6_verwacht, pl_lookup):
-    bsns = set(bsns_deel_6_verwacht) - set([pl_lookup[pl_nummer] for pl_nummer in PERSON_NUMBERS_DEEL_4_VERWIJDER])
+    bsns = set(bsns_deel_6_verwacht) - set(
+        [pl_lookup[pl_nummer] for pl_nummer in PERSON_NUMBERS_DEEL_4_VERWIJDER]
+    )
     check_verwachtingen_bsns(bsns)
 
 
@@ -248,6 +254,26 @@ def test_deel_9(pl_lookup):
 @pytest.mark.deel_9_reset
 def test_deel_9_reset(pl_lookup):
     reset_volgindicaties(pl_lookup, PERSON_NUMBERS_DEEL_9_PLAATSEN)
+
+
+@pytest.mark.parameter
+def test_parameter(bsns_parameter):
+    setup_volgindicaties_bsns(bsns_parameter)
+
+
+@pytest.mark.parameter_reset
+def test_parameter_reset(bsns_parameter):
+    reset_volgindicaties_bsns(bsns_parameter)
+
+
+@pytest.mark.input_file
+def test_input_file(bsns_list):
+    setup_volgindicaties_bsns(bsns_list)
+
+
+@pytest.mark.input_file_reset
+def test_input_file_reset(bsns_list):
+    reset_volgindicaties_bsns(bsns_list)
 
 
 def main():

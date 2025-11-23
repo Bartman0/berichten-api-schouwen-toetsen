@@ -25,6 +25,10 @@ def pytest_addoption(parser):
             "deel_3_verwacht",
             "deel_5_verwacht",
             "deel_6_verwacht",
+            "parameter",
+            "parameter_reset",
+            "input_file",
+            "input_file_reset",
         ),
         required=True,
     )
@@ -33,14 +37,28 @@ def pytest_addoption(parser):
         action="store",
         default=None,
         help="Specify the PL file to use",
-        required=True,
+        required=False,
     )
     parser.addoption(
         "--pl-sheet-name",
         action="store",
         default=None,
         help="Specify the PL tab to use",
-        required=True,
+        required=False,
+    )
+    parser.addoption(
+        "--bsn",
+        action="store",
+        default=None,
+        help="Specify the BSN's to use",
+        required=False,
+    )
+    parser.addoption(
+        "--input_file",
+        action="store",
+        default=None,
+        help="Specify the input file to use",
+        required=False,
     )
 
 
@@ -58,6 +76,14 @@ def pl_filename(request):
 
 def pl_sheet_name(request):
     return request.config.getoption("--pl-sheet-name")
+
+
+def pl_bsn(request):
+    return request.config.getoption("--bsn")
+
+
+def pl_input_file(request):
+    return request.config.getoption("--input_file")
 
 
 def parse_excel_from_row(filepath, sheet_name=0, start_row=2):
@@ -170,4 +196,25 @@ def bsns_deel_6_verwacht(request):
         if str(row["opmerking.3"]) != "nan"
     ]
     logger.debug(f"deel_6 basisset BSN's verwacht [{len(bsns)}]: {bsns}")
+    return bsns
+
+
+@pytest.fixture
+def bsns_parameter(request):
+    parameter = pl_bsn(request)
+    if parameter is None or len(parameter) == 0:
+        raise ValueError("parameter bsn not set")
+    bsns = [item.strip() for item in parameter.split(",")]
+    logger.debug(f"parameter BSN's [{len(bsns)}]: {bsns}")
+    return bsns
+
+
+@pytest.fixture
+def bsns_list(request):
+    input_file = pl_input_file(request)
+    if input_file is None or len(input_file) == 0:
+        raise ValueError("parameter input_file not set")
+    with open(input_file) as bsns:
+        bsns = [bsn.strip() for bsn in bsns if bsn.strip()]
+    logger.debug(f"input_file BSN's [{len(bsns)}]: {bsns}")
     return bsns

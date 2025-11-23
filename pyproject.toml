@@ -26,6 +26,10 @@ markers = [
   "deel_3_verwacht",
   "deel_5_verwacht",
   "deel_6_verwacht",
+  "parameter",
+  "parameter_reset",
+  "input_file",
+  "input_file_reset",
 ]
 
 log_cli = true
